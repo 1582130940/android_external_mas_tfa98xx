@@ -649,7 +649,6 @@ enum Tfa98xx_Error tfaContWriteDrcFile(struct tfa_device *tfa, int size, uint8_t
 	return err;
 }
 
-
 /*
  * write a parameter file to the device
  * The VstepIndex and VstepMsgIndex are only used to write a specific msg from the vstep file.
@@ -876,7 +875,6 @@ int tfa_cnt_get_patch_version(struct tfa_device *tfa)
 
 	return version;
 }
-
 
 /*
  * get the slave for the device if it exists
@@ -1560,7 +1558,6 @@ static enum Tfa98xx_Error get_sample_rate_info(struct tfa_device *tfa, nxpTfaPro
 	int fs_default_profile = 8;	/* default is 48kHz */
 	int fs_next_profile = 8;		/* default is 48kHz */
 
-
 	/* ---------- default settings previous profile ---------- */
 	for (i = 0; i < previous_prof->length; i++) {
 		/* Search for the default section */
@@ -1787,7 +1784,6 @@ enum Tfa98xx_Error tfaContWriteProfile(struct tfa_device *tfa, int prof_idx, int
 	/* Check if there are sample rate changes */
 	err = get_sample_rate_info(tfa, prof, previous_prof, fs_previous_profile);
 	if (err) return err;
-
 
 	/* Write files from previous profile (default section)
 	 * Should only be used for the patch&trap patch (file)

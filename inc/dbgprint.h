@@ -38,7 +38,6 @@
 #   define MSG(fmt,va...) printk(KERN_INFO PREFIX "%s:%d: "fmt,__func__,__LINE__,##va)
 #   define _ERRORMSG(fmt,va...) printk(KERN_ERR PREFIX "ERROR %s:%d: "fmt,__func__,__LINE__, ##va)
 
-
 #   define DEBUG0(x...) MSG(x)
 #   define DEBUG1(x...) _DEBUG(1,x)
 #   define DEBUG2(x...) _DEBUG(2,x)
@@ -144,7 +143,6 @@
 #	define PRINT_FILE(file,...)	fprintf(file,__VA_ARGS__)
 #	define PRINT_ASSERT(e)if ((e)) fprintf(stderr, "PrintAssert:%s (%s:%d) error code:%d\n",__FUNCTION__,__FILE__,__LINE__, e)
 //#	define PRINT_ASSERT(e) if ((e)) fprintf(stderr, "PrintAssert:%s (%s:%d) %s\n",__FUNCTION__,__FILE__,__LINE__, Tfa98xx_GetErrorString(e))
-
 
 #endif	 /* WIN32 */
 

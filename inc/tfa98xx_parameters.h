@@ -77,7 +77,6 @@ typedef enum nxpTfaSamplerate {
 // Keep in sync with nxpTfaSamplerate_t !
 static const int nxpTfaSamplerateHz[fs_count] = { 8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 96000 };
 
-
 /*
  * coolflux direct memory access
  */
@@ -192,7 +191,6 @@ typedef struct nxpTfaIntegratorFilter {
   float  samplingFreq;      /**< sampling frequency in Hertz */
   float  leakage;           /**< leakage factor; range [0.0 1.0] */
 } nxpTfaIntegratorFilter_t;
-
 
 typedef struct nxpTfaEqFilter {
   nxpTfaBiquad_t biquad;
@@ -610,7 +608,6 @@ typedef struct nxpTfaFileDsc {
 	uint8_t data[]; //payload
 } nxpTfaFileDsc_t;
 
-
 /*
  * device descriptor list
  */
@@ -693,7 +690,6 @@ typedef struct nxpTfaNoInit {
 typedef struct nxpTfaFeatures {
 	uint16_t value[3];	// features value
 } nxpTfaFeatures_t;
-
 
 /*
  * the container file

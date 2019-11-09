@@ -685,7 +685,6 @@ static enum Tfa98xx_Error tfa9874_faim_protect(struct tfa_device *tfa, int statu
 	return ret;
 }
 
-
 static enum Tfa98xx_Error tfa9874_specific(struct tfa_device *tfa)
 {
 	enum Tfa98xx_Error error = Tfa98xx_Error_Ok;
@@ -851,7 +850,6 @@ static enum Tfa98xx_Error tfa9878_faim_protect(struct tfa_device *tfa, int statu
 	return ret;
 }
 
-
 static enum Tfa98xx_Error tfa9878_specific(struct tfa_device *tfa)
 {
 	enum Tfa98xx_Error error = Tfa98xx_Error_Ok;
@@ -881,7 +879,6 @@ static enum Tfa98xx_Error tfa9878_specific(struct tfa_device *tfa)
 		reg_write(tfa, 0x71, 0x303e); //POR=0x307e
 		reg_write(tfa, 0x83, 0x009a); //POR=0x0799
 		/* ----- generated code end   ----- */
-
 
 		break;
 	case 0x1a78: /* Initial revision ID */

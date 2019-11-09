@@ -1091,8 +1091,6 @@ tfa98xx_process_patch_file(struct tfa_device *tfa, int length,
 	return  error;
 }
 
-
-
 /* the patch contains a header with the following
  * IC revision register: 1 byte, 0xFF means don't care
  * XMEM address to check: 2 bytes, big endian, 0xFFFF means don't care
@@ -1152,7 +1150,6 @@ tfa98xx_check_ic_rom_version(struct tfa_device *tfa, const unsigned char patchhe
 
 	return error;
 }
-
 
 #define PATCH_HEADER_LENGTH 6
 enum Tfa98xx_Error
@@ -1240,7 +1237,6 @@ void tfa98xx_convert_bytes2data(int num_bytes, const unsigned char bytes[],
 	}
 }
 
-
 /**
  convert signed 32 bit integers to 24 bit aligned bytes
    input:   data contains "num_data" int elements
@@ -1275,7 +1271,6 @@ void tfa98xx_convert_data2bytes(int num_data, const int data[],
  *   depending on framework to be up and running
  *   need base i2c of memaccess (tfa1=0x70/tfa2=0x90)
  */
-
 
  /* write dsp messages in function tfa_dsp_msg() */
  /*  note the 'old' write_parameter() was more efficient because all i2c was in one burst transaction */
@@ -1684,7 +1679,6 @@ enum Tfa98xx_Error mem_write(struct tfa_device *tfa, unsigned short address, int
 	return error;
 }
 
-
 /*
  *  write/read raw msg functions :
  *  the buffer is provided in little endian format, each word occupying 3 bytes, length is in bytes.
@@ -1843,7 +1837,6 @@ tfa98xx_dsp_read_mem_exit:
 	return error;
 }
 
-
 enum Tfa98xx_Error
 	tfa98xx_dsp_write_mem_word(struct tfa_device *tfa, unsigned short address, int value, int memtype)
 {
@@ -1901,7 +1894,6 @@ enum Tfa98xx_Error
 	bytes[nr++] = 0;
 	bytes[nr++] = MODULE_BIQUADFILTERBANK + 128;
 	bytes[nr++] = (unsigned char)biquad_index;
-
 
 	/* set in correct order and format for the DSP */
 	coeff_buffer[0] = (int)-8388608;	/* -1.0f */
@@ -2501,7 +2493,6 @@ uint16_t tfa_get_bf_value(const uint16_t bf, const uint16_t reg_value)
 	return value;
 }
 
-
 int tfa_write_reg(struct tfa_device *tfa, const uint16_t bf, const uint16_t reg_value)
 {
 	enum Tfa98xx_Error err;
@@ -2680,7 +2671,6 @@ enum Tfa98xx_Error tfaGetFwApiVersion(struct tfa_device *tfa, unsigned char *pFi
 
 }
 
-
 /*
  *  start the speakerboost algorithm
  *  this implies a full system startup when the system was not already started
@@ -2818,8 +2808,6 @@ enum Tfa98xx_Error tfaRunColdboot(struct tfa_device *tfa, int state)
 
 	return err;
 }
-
-
 
 /*
  * load the patch if any
@@ -2972,7 +2960,6 @@ enum Tfa98xx_Error tfaRunMute(struct tfa_device *tfa)
 					break;
 				tries++;
 			} while (tries < AMPOFFWAIT_TRIES);
-
 
 			if (tfa->verbose)
 				pr_debug("-------------------- muted --------------------\n");
@@ -3995,7 +3982,6 @@ int tfa_get_noclk(struct tfa_device *tfa)
 {
 	return TFA_GET_BF(tfa, NOCLK);
 }
-
 
 enum Tfa98xx_Error tfa_status(struct tfa_device *tfa)
 {

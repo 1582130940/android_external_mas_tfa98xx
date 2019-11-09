@@ -281,7 +281,6 @@ typedef struct nxpTfaGroup {
 	uint8_t profileId[64];
 } nxpTfaGroup_t;
 
-
 struct nxpTfa98xx_Memtrack_data {
 	int length;
 	float mValues[MEMTRACK_MAX_WORDS];
@@ -424,7 +423,6 @@ enum Tfa98xx_Error tfa98xx_supported_saam(struct tfa_device *tfa, enum Tfa98xx_s
  *   @return error code
  */
 enum Tfa98xx_Error tfa98xx_dsp_write_tables(struct tfa_device *tfa, int sample_rate);
-
 
 /* set or clear DSP reset signal
  * @param new state
@@ -747,7 +745,6 @@ enum Tfa98xx_Error tfa98xx_dsp_write_drc(struct tfa_device *tfa, int length, con
  * @param buf character buffer to write
 */
 enum Tfa98xx_Error tfa_dsp_msg(struct tfa_device *tfa, int length, const char *buf);
-
 
 /**
  * The wrapper functions to call the dsp msg, register and memory function for tfa or probus

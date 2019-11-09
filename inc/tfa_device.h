@@ -182,7 +182,6 @@ int tfa_dev_probe(int slave, struct tfa_device *tfa);
  */
 enum tfa_error tfa_dev_start(struct tfa_device *tfa, int profile, int vstep);
 
-
 /**
  * Stop audio for this instance as gracefully as possible.
  * Audio will be muted and the PLL will be shutdown together with any other
@@ -230,7 +229,6 @@ enum tfa_error tfa_dev_set_state(struct tfa_device *tfa, enum tfa_state state,in
  */
 enum tfa_state tfa_dev_get_state(struct tfa_device *tfa);
 
-
 /*****************************************************************************/
 /*****************************************************************************/
 /**
@@ -254,7 +252,6 @@ int tfa_dev_mtp_get(struct tfa_device *tfa, enum tfa_mtp item);
  *
  */
 enum tfa_error tfa_dev_mtp_set(struct tfa_device *tfa, enum tfa_mtp item, int value);
-
 
 //irq
 /* tfa2 interrupt support

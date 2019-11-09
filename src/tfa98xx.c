@@ -115,7 +115,6 @@ static const struct tfa98xx_rate rate_to_fssel[] = {
 	{ 48000, 8 },
 };
 
-
 static inline char *tfa_cont_profile_name(struct tfa98xx *tfa98xx, int prof_idx)
 {
 	if (tfa98xx->tfa->cnt == NULL)
@@ -386,7 +385,6 @@ static int tfa98xx_dbgfs_mtpex_get(void *data, u64 *val)
 		pr_err("[0x%x] Unable to check DSP access: %d\n", tfa98xx->i2c->addr, value);
 		return -EIO;
 	}
-
 
 	*val = value;
 	pr_debug("[0x%x] MTPEX : %d\n", tfa98xx->i2c->addr, value);
@@ -907,7 +905,6 @@ static void tfa98xx_debug_remove(struct tfa98xx *tfa98xx)
 		debugfs_remove_recursive(tfa98xx->dbg_dir);
 }
 #endif
-
 
 /* copies the profile basename (i.e. part until .) into buf */
 static void get_profile_basename(char* buf, char* profile)
@@ -1761,7 +1758,6 @@ retry:
 	return error;
 }
 
-
 /*
  * init external dsp
  */
@@ -1879,7 +1875,6 @@ enum Tfa98xx_Error tfa98xx_write_raw(struct tfa_device *tfa,
 	struct tfa98xx *tfa98xx;
 	int ret;
 	int retries = I2C_RETRIES;
-
 
 	if (tfa == NULL) {
 		pr_err("No device available\n");
@@ -2138,7 +2133,6 @@ static int tfa98xx_load_container(struct tfa98xx *tfa98xx)
 		tfa98xx, tfa98xx_container_loaded);
 }
 
-
 static void tfa98xx_tapdet(struct tfa98xx *tfa98xx)
 {
 	unsigned int tap_pattern;
@@ -2317,10 +2311,8 @@ static void tfa98xx_dsp_init(struct tfa98xx *tfa98xx)
 		}
 	}
 
-
 	return;
 }
-
 
 static void tfa98xx_dsp_init_work(struct work_struct *work)
 {
@@ -2531,7 +2523,6 @@ static int tfa98xx_hw_params(struct snd_pcm_substream *substream,
 	}
 	pr_debug("mixer profile:container profile = [%d:%d]\n", tfa98xx_mixer_profile, prof_idx);
 
-
 	/* update 'real' profile (container profile) */
 	tfa98xx->profile = prof_idx;
 
@@ -2707,7 +2698,6 @@ static struct snd_soc_codec_driver soc_codec_dev_tfa98xx = {
 #endif
 };
 
-
 static bool tfa98xx_writeable_register(struct device *dev, unsigned int reg)
 {
 	/* enable read access for all registers */
@@ -2748,7 +2738,6 @@ static void tfa98xx_irq_tfa2(struct tfa98xx *tfa98xx)
 	tfa_irq_mask(tfa98xx->tfa);
 	queue_delayed_work(tfa98xx->tfa98xx_wq, &tfa98xx->interrupt_work, 0);
 }
-
 
 static irqreturn_t tfa98xx_irq(int irq, void *data)
 {

@@ -10,7 +10,6 @@
 #ifndef TFA9891_GENREGS_H
 #define TFA9891_GENREGS_H
 
-
 #define TFA98XX_STATUSREG                  0x00
 #define TFA98XX_BATTERYVOLTAGE             0x01
 #define TFA9891_TEMPERATURE                0x02
@@ -200,7 +199,6 @@
 #define TFA98XX_BATTERYVOLTAGE_BATS_MAX                         1023
 #define TFA98XX_BATTERYVOLTAGE_BATS_MSK                        0x3ff
 
-
 /*
  * (0x02)-Temperature
  */
@@ -214,7 +212,6 @@
 #define TFA9891_TEMPERATURE_TEMPS_MAX                            511
 #define TFA9891_TEMPERATURE_TEMPS_MSK                          0x1ff
 
-
 /*
  * (0x03)-RevisionNumber
  */
@@ -227,7 +224,6 @@
 #define TFA98XX_REVISIONNUMBER_REV_LEN                             8
 #define TFA98XX_REVISIONNUMBER_REV_MAX                           255
 #define TFA98XX_REVISIONNUMBER_REV_MSK                          0xff
-
 
 /*
  * (0x04)-I2SReg
@@ -305,7 +301,6 @@
 #define TFA98XX_I2SREG_I2SSR_MAX                                  15
 #define TFA98XX_I2SREG_I2SSR_MSK                              0xf000
 
-
 /*
  * (0x05)-bat_prot
  */
@@ -373,7 +368,6 @@
 #define TFA98XX_BAT_PROT_BSSBY_MAX                                 1
 #define TFA98XX_BAT_PROT_BSSBY_MSK                            0x8000
 
-
 /*
  * (0x06)-audio_ctr
  */
@@ -423,7 +417,6 @@
 #define TFA98XX_AUDIO_CTR_VOL_MAX                                255
 #define TFA98XX_AUDIO_CTR_VOL_MSK                             0xff00
 
-
 /*
  * (0x07)-DCDCboost
  */
@@ -464,7 +457,6 @@
 #define TFA98XX_DCDCBOOST_DCSR_MAX                                 1
 #define TFA98XX_DCDCBOOST_DCSR_MSK                             0x800
 
-
 /*
  * (0x08)-spkr_calibration
  */
@@ -486,7 +478,6 @@
 #define TFA98XX_SPKR_CALIBRATION_EXTTS_LEN                         9
 #define TFA98XX_SPKR_CALIBRATION_EXTTS_MAX                       511
 #define TFA98XX_SPKR_CALIBRATION_EXTTS_MSK                     0x3fe
-
 
 /*
  * (0x09)-sys_ctrl
@@ -609,7 +600,6 @@
 #define TFA98XX_SYS_CTRL_IPLL_MAX                                  1
 #define TFA98XX_SYS_CTRL_IPLL_MSK                             0x4000
 
-
 /*
  * (0x0a)-I2S_sel_reg
  */
@@ -659,7 +649,6 @@
 #define TFA98XX_I2S_SEL_REG_DCFG_MAX                              15
 #define TFA98XX_I2S_SEL_REG_DCFG_MSK                          0x7800
 
-
 /*
  * (0x0b)-Hidden_mtp_key2
  */
@@ -672,7 +661,6 @@
 #define TFA98XX_HIDDEN_MTP_KEY2_MTPK_LEN                           8
 #define TFA98XX_HIDDEN_MTP_KEY2_MTPK_MAX                         255
 #define TFA98XX_HIDDEN_MTP_KEY2_MTPK_MSK                        0xff
-
 
 /*
  * (0x0f)-interrupt_reg
@@ -777,7 +765,6 @@
 #define TFA98XX_INTERRUPT_REG_INTP_MAX                             1
 #define TFA98XX_INTERRUPT_REG_INTP_MSK                        0x8000
 
-
 /*
  * (0x10)-pdm_ctrl
  */
@@ -826,7 +813,6 @@
 #define TFA98XX_PDM_CTRL_PADSEL_LEN                                2
 #define TFA98XX_PDM_CTRL_PADSEL_MAX                                3
 #define TFA98XX_PDM_CTRL_PADSEL_MSK                             0xc0
-
 
 /*
  * (0x11)-pdm_out_ctrl
@@ -877,7 +863,6 @@
 #define TFA98XX_PDM_OUT_CTRL_PDMOINTEN_MAX                         1
 #define TFA98XX_PDM_OUT_CTRL_PDMOINTEN_MSK                      0x40
 
-
 /*
  * (0x12)-pdm_ds4_r
  */
@@ -899,7 +884,6 @@
 #define TFA98XX_PDM_DS4_R_PDMORG2_LEN                              4
 #define TFA98XX_PDM_DS4_R_PDMORG2_MAX                             15
 #define TFA98XX_PDM_DS4_R_PDMORG2_MSK                           0xf0
-
 
 /*
  * (0x13)-pdm_ds4_l
@@ -923,7 +907,6 @@
 #define TFA98XX_PDM_DS4_L_PDMOLG2_MAX                             15
 #define TFA98XX_PDM_DS4_L_PDMOLG2_MSK                           0xf0
 
-
 /*
  * (0x22)-ctrl_saam_pga
  */
@@ -946,7 +929,6 @@
 #define TFA98XX_CTRL_SAAM_PGA_SAAMPGACTRL_MAX                      1
 #define TFA98XX_CTRL_SAAM_PGA_SAAMPGACTRL_MSK                   0x20
 
-
 /*
  * (0x25)-misc_ctrl
  */
@@ -960,7 +942,6 @@
 #define TFA98XX_MISC_CTRL_PLLCCOSEL_MAX                            1
 #define TFA98XX_MISC_CTRL_PLLCCOSEL_MSK                          0x1
 
-
 /*
  * (0x46)-CurrentSense1
  */
@@ -973,7 +954,6 @@
 #define TFA98XX_CURRENTSENSE1_CSBYPGC_LEN                          1
 #define TFA98XX_CURRENTSENSE1_CSBYPGC_MAX                          1
 #define TFA98XX_CURRENTSENSE1_CSBYPGC_MSK                        0x1
-
 
 /*
  * (0x49)-CurrentSense4
@@ -997,11 +977,9 @@
 #define TFA98XX_CURRENTSENSE4_CLIP2_MAX                            1
 #define TFA98XX_CURRENTSENSE4_CLIP2_MSK                          0x2
 
-
 /*
  * (0x62)-Hidden_mtp_ctrl_reg3
  */
-
 
 /*
  * (0x70)-cf_controls
@@ -1052,7 +1030,6 @@
 #define TFA98XX_CF_CONTROLS_REQ_MAX                              255
 #define TFA98XX_CF_CONTROLS_REQ_MSK                           0xff00
 
-
 /*
  * (0x71)-cf_mad
  */
@@ -1066,7 +1043,6 @@
 #define TFA9891_CF_MAD_MADD_MAX                                65535
 #define TFA9891_CF_MAD_MADD_MSK                               0xffff
 
-
 /*
  * (0x72)-cf_mem
  */
@@ -1079,7 +1055,6 @@
 #define TFA9891_CF_MEM_MEMA_LEN                                   16
 #define TFA9891_CF_MEM_MEMA_MAX                                65535
 #define TFA9891_CF_MEM_MEMA_MSK                               0xffff
-
 
 /*
  * (0x73)-cf_status
@@ -1102,7 +1077,6 @@
 #define TFA9891_CF_STATUS_ACK_LEN                                  8
 #define TFA9891_CF_STATUS_ACK_MAX                                255
 #define TFA9891_CF_STATUS_ACK_MSK                             0xff00
-
 
 /*
  * (0x80)-Key2Protected_spkr_cal_mtp

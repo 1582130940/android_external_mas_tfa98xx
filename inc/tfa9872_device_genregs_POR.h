@@ -10,7 +10,6 @@
 #ifndef _TFA9872_DEVICE_GENREGS_H
 #define _TFA9872_DEVICE_GENREGS_H
 
-
 #define TFA9872_SYS_CONTROL0              0x00
 #define TFA9872_SYS_CONTROL1              0x01
 #define TFA9872_SYS_CONTROL2              0x02
