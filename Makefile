@@ -31,7 +31,7 @@ GIT_VERSION=$(shell cd $(PLMA_TFA_AUDIO_DRV_DIR); git describe --tags --dirty --
 EXTRA_CFLAGS += -DTFA98XX_GIT_VERSIONS=\"$(GIT_VERSION)\"
 
 EXTRA_CFLAGS += -I$(src)/inc
-EXTRA_CFLAGS += -Werror
+EXTRA_CFLAGS += -Werror -Wno-enum-conversion
 
 obj-$(CONFIG_SND_SOC_TFA98XX) := snd-soc-tfa98xx.o
 
